@@ -1,0 +1,15 @@
+<div class="header" *ngIf='product'>
+  <h1>Product Detail: {{ product.productName }}</h1>
+  <div id="productDescriptionContainer">
+    <div id="productDescriptionImage">
+      <img [src]="product.imageUrl"/>
+    </div>
+    <div id="productDescription">
+      <p>Name: {{product.productName}}</p>
+      <p>Code: {{ product.productCode }}</p>
+      <p>Price: {{ product.price }}</p>
+      <div id="productDescriptionRating">Rating: <pm-star [rating]='product.starRating'></pm-star></div>
+      <p>Description: {{ product.description }}</p>
+    </div>
+  </div>
+</div>

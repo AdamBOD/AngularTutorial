@@ -1,0 +1,18 @@
+<!--The whole content below can be removed with the new code.-->
+<div class="navbar">
+  <!-- <div class="navbarElement"><a [routerLink]="['/welcome']">Home</a></div>
+  <div class="navbarElement"><a [routerLink]="['/products']">Product List</a></div> -->
+  <button class="navbarElement" [routerLink]="['/welcome']">Home</button>
+  <button class="navbarElement" [routerLink]="['/products']">Products List</button>
+</div>
+<div style="text-align:center">
+  <!-- <h1>
+    {{pageTitle}}
+  </h1>
+  <p>First Component</p> -->
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+  
+  <!-- <pm-products></pm-products> -->
+</div>

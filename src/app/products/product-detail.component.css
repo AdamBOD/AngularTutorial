@@ -1,0 +1,21 @@
+#productDescriptionContainer {
+    display: inline-table;
+    border: 1px solid cadetblue;
+    border-radius: 5px;
+}
+
+#productDescriptionImage {
+    width: 45%;
+    float: left;
+    padding-right: 5%;
+}
+
+#productDescription {
+    width: 50%;
+    float: right;
+    padding-left: 5%;
+}
+
+#productDescriptionRating {
+    display: inline-flex;
+}

@@ -1,0 +1,32 @@
+<div>
+    <div>
+        Product List
+        <button id="productImageButton" (click)="toggleImageVisibility ()">{{ buttonText }}</button>
+        <div>Filter Products  <input [(ngModel)]="filterVar" style="margin-bottom: 5px;margin-top: 5px;"></div>
+    </div>
+</div>
+
+<table *ngIf='products && products.length != 0'>
+    <thead>
+        <th>Image</th>
+        <th>Product</th>
+        <th>Code</th>
+        <th>Available</th>
+        <th>Price</th>
+        <th>Rating</th>
+    </thead>
+    <tbody>
+        <tr *ngFor='let product of filteredProducts'>
+            <td class="productImageCell"><img class="productImage" [title]="product.productName" [src]="product.imageUrl" [style.visibility]="imageVisibility"></td>
+            <td class="text-td"><a [routerLink]="['/products', product.productId]">{{ product.productName }}</a></td>
+            <td class="number-td">{{ product.productCode | convertToSpaces: "-" }}</td>
+            <td class="number-td">{{ product.releaseDate }}</td>
+            <td class="number-td">€{{ product.price }}</td>
+            <td class="number-td"><pm-star [rating]='product.starRating' (ratingClicked)='onRatingClicked ($event)' [id]="product.productName"></pm-star></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    This is a product list that shows all currently available products, their name, their code, their price and their rating
+</p>

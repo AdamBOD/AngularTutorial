@@ -1,0 +1,65 @@
+table {
+    min-width: 700px;
+    max-width: 50%;
+    background-color: #B0B0B0;
+    border: none;
+    border-spacing: 0;
+    margin: auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    table-layout: fixed;
+}
+
+thead {
+    top: 0;
+    position: sticky;
+}
+
+td, th {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    width: 85px;
+}
+
+th {
+    height: 25px;
+    background-color: grey;
+    color: azure;
+    padding-bottom: 0;
+    padding-top: 2.5px;
+    text-align: center;
+}
+
+.text-td {
+    text-align: left !important;
+}
+
+.number-td {
+    text-align: center !important;
+}
+
+.productImage {
+    width: 50px;
+    height: 50px;
+}
+
+button {
+    background-color: cadetblue;
+    border: none;
+    border-radius: 3px;
+    color: azure;
+    margin: 2px;
+    padding: 2px;
+    width: 10%;
+    height: 5%;
+}
+
+button:hover {
+    background-color: #3C6F70;
+    cursor: pointer;
+}
+
+.numberRating {
+    visibility: hidden;
+}
